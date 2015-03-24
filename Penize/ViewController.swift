@@ -26,6 +26,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var passTxtField: UITextField!
 
+    @IBAction func Save(sender: UIButton) {
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+        var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Acc", inManagedObjectContext: context)
+        newUser.setValue("" + txtUsername.text, forKey: "userTxtField")
+        newUser.setValue("Test Pass", forKey: "passTxtField")
+        
+        context.save(nil)
+        println(newUser)
+        println("Saved")
+    }
+    
     @IBAction func loadBtn(sender: UIButton) {
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
