@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0E01DBAC-0B68-41FC-B298-3668DA83E094</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Penize</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BFF10CE5A4807A7B361A781F34DFC9D1AE637C6B</key>
+		<string>https://github.com/PanMluvci/Penize.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Penize.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BFF10CE5A4807A7B361A781F34DFC9D1AE637C6B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/PanMluvci/Penize.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BFF10CE5A4807A7B361A781F34DFC9D1AE637C6B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BFF10CE5A4807A7B361A781F34DFC9D1AE637C6B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Penize</string>
+		</dict>
+	</array>
+</dict>
+</plist>
