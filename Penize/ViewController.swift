@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         newUser.setValue(passTxtField.text, forKey: "pass")
         
         context.save(nil)
-        println(newUser)
+       //println(newUser)
         println("Saved")
     }
     
@@ -59,5 +59,12 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func purge(sender: UIButton) {
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+    }
+    
 }
 
