@@ -31,8 +31,8 @@ class ViewController: UIViewController {
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Acc", inManagedObjectContext: context)
-        newUser.setValue("" + txtUsername.text, forKey: "userTxtField")
-        newUser.setValue("Test Pass", forKey: "passTxtField")
+        newUser.setValue("Test Name", forKey: "user")
+        newUser.setValue("Test Pass", forKey: "pass")
         
         context.save(nil)
         println(newUser)
