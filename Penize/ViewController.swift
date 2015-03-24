@@ -61,9 +61,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func purge(sender: UIButton) {
-        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-        var context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
+        let request = NSFetchRequest(entityName: "Acc")
+        
+        var myList = context.executeFetchRequest(request, error: nil)!
+        
+            var bas: NSManagedObject!
+            
+            
+            for bas: AnyObject in myList
+            {
+                context.deleteObject(bas as NSManagedObject)
+            }
+            
+            myList.removeAll(keepCapacity: false)
+            
+            context.save(nil)
+        
+
     }
     
 }
