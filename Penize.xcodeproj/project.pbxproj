@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC64EA001AC496FE0074FE15 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64E9FF1AC496FE0074FE15 /* PreferencesViewController.swift */; };
 		CC68E18F1ABE0D6D00F5E5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68E18E1ABE0D6D00F5E5F9 /* AppDelegate.swift */; };
 		CC68E1921ABE0D6D00F5E5F9 /* Penize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC68E1901ABE0D6D00F5E5F9 /* Penize.xcdatamodeld */; };
 		CC68E1941ABE0D6D00F5E5F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68E1931ABE0D6D00F5E5F9 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC64E9FF1AC496FE0074FE15 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		CC68E1891ABE0D6D00F5E5F9 /* Penize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Penize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC68E18D1ABE0D6D00F5E5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC68E18E1ABE0D6D00F5E5F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				CC68E18E1ABE0D6D00F5E5F9 /* AppDelegate.swift */,
 				CC68E1931ABE0D6D00F5E5F9 /* ViewController.swift */,
+				CC64E9FF1AC496FE0074FE15 /* PreferencesViewController.swift */,
 				CC7E96EA1AC453E4004440B8 /* AddEntryViewController.swift */,
 				CC68E1951ABE0D6D00F5E5F9 /* Main.storyboard */,
 				CC68E1981ABE0D6D00F5E5F9 /* Images.xcassets */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC64EA001AC496FE0074FE15 /* PreferencesViewController.swift in Sources */,
 				CC68E1941ABE0D6D00F5E5F9 /* ViewController.swift in Sources */,
 				CC7E96EB1AC453E4004440B8 /* AddEntryViewController.swift in Sources */,
 				CC68E1921ABE0D6D00F5E5F9 /* Penize.xcdatamodeld in Sources */,

@@ -27,11 +27,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixS-ue-Xch">
                                 <rect key="frame" x="381" y="274" width="67" height="52"/>
-                                <state key="normal" title="Load">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="154" y="125" width="67" height="52"/>
+                                    <rect key="frame" x="40" y="578" width="50" height="50"/>
                                 </variation>
                                 <connections>
                                     <action selector="loadBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yvi-OQ-h6g"/>
@@ -54,48 +54,78 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="207" width="260" height="340"/>
+                                    <rect key="frame" x="57" y="200" width="260" height="340"/>
                                 </variation>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="HkG-xW-4Bu">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="40" width="50" height="50"/>
-                                </variation>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zce-rq-hdx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="40" width="50" height="50"/>
-                                </variation>
-                                <connections>
-                                    <action selector="addNewEntryBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sPC-kb-rFe"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" translatesAutoresizingMaskIntoConstraints="NO" id="uJH-Dh-P6V">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="162" y="578" width="50" height="50"/>
                                 </variation>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="config" translatesAutoresizingMaskIntoConstraints="NO" id="Qwt-Vb-EZi">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="282" y="578" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refresh" translatesAutoresizingMaskIntoConstraints="NO" id="3ZN-uW-V1T">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="578" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbI-Id-PGk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="282" y="578" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="prefbtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pWB-aA-gsR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="HkG-xW-4Bu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="81" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zce-rq-hdx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="81" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="addNewEntryBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sPC-kb-rFe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="VCu-bb-gaY"/>
                                 <exclude reference="kdT-mP-wVe"/>
+                                <exclude reference="uJH-Dh-P6V"/>
+                                <exclude reference="Qwt-Vb-EZi"/>
+                                <exclude reference="3ZN-uW-V1T"/>
+                                <exclude reference="sbI-Id-PGk"/>
                                 <exclude reference="HkG-xW-4Bu"/>
                                 <exclude reference="zce-rq-hdx"/>
-                                <exclude reference="uJH-Dh-P6V"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="VCu-bb-gaY"/>
                                 <include reference="kdT-mP-wVe"/>
+                                <include reference="uJH-Dh-P6V"/>
+                                <include reference="Qwt-Vb-EZi"/>
+                                <include reference="3ZN-uW-V1T"/>
+                                <include reference="sbI-Id-PGk"/>
                                 <include reference="HkG-xW-4Bu"/>
                                 <include reference="zce-rq-hdx"/>
-                                <include reference="uJH-Dh-P6V"/>
                             </mask>
                         </variation>
                     </view>
@@ -250,6 +280,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MPY-8C-Vgg" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mY6-c1-emK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -263,11 +294,56 @@
             </objects>
             <point key="canvasLocation" x="343.5" y="-125"/>
         </scene>
+        <!--Preferences View Controller-->
+        <scene sceneID="Dku-n4-WPG">
+            <objects>
+                <viewController storyboardIdentifier="AddPrefVC" id="jSw-Uh-4mi" customClass="PreferencesViewController" customModule="Penize" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wBu-g3-zpS"/>
+                        <viewControllerLayoutGuide type="bottom" id="9WO-Ww-aY1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7bU-su-7Pq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8Z-pm-LAO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="125" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backBtn:" destination="jSw-Uh-4mi" eventType="touchUpInside" id="GJ6-lS-ttd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="L8Z-pm-LAO"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="L8Z-pm-LAO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DbU-1j-HXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260.75" y="656.5"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="back" width="512" height="512"/>
-        <image name="checkmark" width="512" height="512"/>
-        <image name="plus" width="512" height="512"/>
-        <image name="trash" width="512" height="512"/>
+        <image name="back" width="256" height="256"/>
+        <image name="checkmark" width="256" height="256"/>
+        <image name="config" width="256" height="256"/>
+        <image name="plus" width="256" height="256"/>
+        <image name="refresh" width="256" height="256"/>
+        <image name="trash" width="256" height="256"/>
     </resources>
 </document>

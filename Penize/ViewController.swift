@@ -27,7 +27,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableRows: UITableView!
 
-    @IBOutlet weak var statusLabel: UILabel!
     
 
     
@@ -53,8 +52,9 @@ class ViewController: UIViewController {
         println("Nic tu není.")
         }
     
-        statusLabel.text = "Loaded"
+        
     }
+    
     
     /**
     *   Delete of all rows
@@ -79,13 +79,17 @@ class ViewController: UIViewController {
             
             context.save(nil)
         
-            statusLabel.text = "Deleted"
 
     }
     
     @IBAction func addNewEntryBtn(sender: AnyObject) {
         let addEntryVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryVC") as AddEntryViewController
         self.navigationController?.pushViewController(addEntryVC, animated: true)
+    }
+    
+    @IBAction func prefbtn(sender: AnyObject) {
+        let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as PreferencesViewController
+        self.navigationController?.pushViewController(addPrefVC, animated: true)
     }
     
 }
