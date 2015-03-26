@@ -13,22 +13,9 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPQ-SD-yPf">
-                                <rect key="frame" x="152" y="274" width="67" height="52"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="52" y="134" width="67" height="52"/>
-                                </variation>
-                                <connections>
-                                    <action selector="Save:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WEq-H4-nk3"/>
-                                    <action selector="loadBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hbY-2S-rOK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZm-Sh-Ris">
                                 <rect key="frame" x="389" y="274" width="67" height="52"/>
                                 <state key="normal" title="Load">
@@ -44,7 +31,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="167" y="134" width="67" height="52"/>
+                                    <rect key="frame" x="154" y="134" width="67" height="52"/>
                                 </variation>
                                 <connections>
                                     <action selector="loadBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yvi-OQ-h6g"/>
@@ -56,7 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="281" y="134" width="67" height="52"/>
+                                    <rect key="frame" x="248" y="134" width="67" height="52"/>
                                 </variation>
                                 <connections>
                                     <action selector="loadBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Up7-Op-PFW"/>
@@ -76,16 +63,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="211" width="296" height="340"/>
+                                    <rect key="frame" x="55" y="207" width="260" height="340"/>
                                 </variation>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zce-rq-hdx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zce-rq-hdx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="+">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="172" y="64" width="30" height="30"/>
+                                    <rect key="frame" x="337" y="20" width="22" height="22"/>
                                 </variation>
                                 <connections>
                                     <action selector="addNewEntryBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sPC-kb-rFe"/>
@@ -132,7 +116,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9ey-5h-d9z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zym-By-GCG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bge-35-6Hb">
@@ -148,7 +132,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="124" y="173" width="224" height="30"/>
+                                    <rect key="frame" x="124" y="158" width="224" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVz-jU-ny3">
@@ -166,20 +150,33 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="44" y="176" width="42" height="21"/>
+                                    <rect key="frame" x="44" y="162" width="42" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPQ-SD-yPf">
+                                <rect key="frame" x="152" y="274" width="67" height="52"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="146" y="220" width="67" height="52"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Save:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WEq-H4-nk3"/>
+                                    <action selector="Save:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="YAQ-En-VcX"/>
+                                    <action selector="loadBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hbY-2S-rOK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94P-ez-tMx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="164" y="46" width="30" height="30"/>
+                                    <rect key="frame" x="172" y="49" width="30" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="toView1Pressed:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="sdZ-ND-7gm"/>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="f55-zZ-jXU"/>
+                                    <action selector="addNewEntryBtn:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="Xjj-ye-ME2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,6 +187,7 @@
                                 <exclude reference="gGQ-jY-FuH"/>
                                 <exclude reference="HVz-jU-ny3"/>
                                 <exclude reference="3p8-fa-0Tn"/>
+                                <exclude reference="RPQ-SD-yPf"/>
                                 <exclude reference="94P-ez-tMx"/>
                             </mask>
                         </variation>
@@ -199,12 +197,17 @@
                                 <include reference="gGQ-jY-FuH"/>
                                 <include reference="HVz-jU-ny3"/>
                                 <include reference="3p8-fa-0Tn"/>
+                                <include reference="RPQ-SD-yPf"/>
                                 <include reference="94P-ez-tMx"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="passTxtField" destination="gGQ-jY-FuH" id="V1S-Sg-IEn"/>
+                        <outlet property="userTxtField" destination="bge-35-6Hb" id="tOr-mB-VCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VN-t6-8Op" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +232,4 @@
             <point key="canvasLocation" x="343.5" y="-125"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="f55-zZ-jXU"/>
-    </inferredMetricsTieBreakers>
 </document>

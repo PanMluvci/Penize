@@ -23,27 +23,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var userTxtField: UITextField!
-    
-    @IBOutlet weak var passTxtField: UITextField!
+
 
     @IBOutlet weak var tableRows: UITableView!
 
     @IBOutlet weak var statusLabel: UILabel!
     
-    @IBAction func Save(sender: UIButton) {
-        statusLabel.text = "Saved"
-        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-        var context: NSManagedObjectContext = appDelegate.managedObjectContext!
-        
-        var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Acc", inManagedObjectContext: context)
-        newUser.setValue(userTxtField.text, forKey: "user")
-        newUser.setValue(passTxtField.text, forKey: "pass")
-        
-        context.save(nil)
-        println("Saved")
-        
-    }
+
     
     /**
     *   Present of all rows from db

@@ -11,6 +11,9 @@ import CoreData
 
 class AddEntryViewController: UIViewController {
     
+    @IBOutlet weak var userTxtField: UITextField!
+    @IBOutlet weak var passTxtField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,8 +25,24 @@ class AddEntryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func toView1Pressed(sender: AnyObject){
-    
-        //self.navi
+    @IBAction func Save(sender: UIButton) {
+        //statusLabel.text = "Saved"
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+        var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Acc", inManagedObjectContext: context)
+        newUser.setValue(userTxtField.text, forKey: "user")
+        newUser.setValue(passTxtField.text, forKey: "pass")
+        
+        context.save(nil)
+        println("Saved")
+        
     }
+    
+    @IBAction func addNewEntryBtn(sender: AnyObject) {
+     
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+    }
+    
 }
