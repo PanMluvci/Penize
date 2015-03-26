@@ -66,10 +66,16 @@
                                     <rect key="frame" x="55" y="207" width="260" height="340"/>
                                 </variation>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zce-rq-hdx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="HkG-xW-4Bu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="309" y="20" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zce-rq-hdx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="337" y="20" width="22" height="22"/>
+                                    <rect key="frame" x="309" y="20" width="50" height="50"/>
                                 </variation>
                                 <connections>
                                     <action selector="addNewEntryBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sPC-kb-rFe"/>
@@ -82,6 +88,7 @@
                                 <exclude reference="VCu-bb-gaY"/>
                                 <exclude reference="fCd-qG-z2N"/>
                                 <exclude reference="kdT-mP-wVe"/>
+                                <exclude reference="HkG-xW-4Bu"/>
                                 <exclude reference="zce-rq-hdx"/>
                             </mask>
                         </variation>
@@ -90,6 +97,7 @@
                                 <include reference="VCu-bb-gaY"/>
                                 <include reference="fCd-qG-z2N"/>
                                 <include reference="kdT-mP-wVe"/>
+                                <include reference="HkG-xW-4Bu"/>
                                 <include reference="zce-rq-hdx"/>
                             </mask>
                         </variation>
@@ -124,7 +132,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="124" y="103" width="224" height="30"/>
+                                    <rect key="frame" x="124" y="123" width="224" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGQ-jY-FuH">
@@ -132,34 +140,58 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="124" y="158" width="224" height="30"/>
+                                    <rect key="frame" x="124" y="173" width="224" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVz-jU-ny3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVz-jU-ny3">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="44" y="107" width="42" height="21"/>
+                                    <rect key="frame" x="37" y="127" width="60" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-fa-0Tn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-fa-0Tn">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="44" y="162" width="42" height="21"/>
+                                    <rect key="frame" x="49" y="177" width="37" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPQ-SD-yPf">
-                                <rect key="frame" x="152" y="274" width="67" height="52"/>
-                                <state key="normal" title="Save">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="jI3-9v-KfJ" userLabel="backImg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="35" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGn-zF-l2z" userLabel="backBtn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="220" width="67" height="52"/>
+                                    <rect key="frame" x="162" y="35" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="addNewEntryBtn:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="OXh-ve-qSP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="vrK-4x-OLa" userLabel="checkmarkSave">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="400" width="56" height="56"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPQ-SD-yPf">
+                                <rect key="frame" x="152" y="274" width="67" height="52"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="159" y="400" width="56" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="Save:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WEq-H4-nk3"/>
@@ -167,18 +199,16 @@
                                     <action selector="loadBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hbY-2S-rOK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94P-ez-tMx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="-">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltY-mz-nuG">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="172" y="49" width="30" height="30"/>
+                                    <rect key="frame" x="0.0" y="211" width="375" height="156"/>
                                 </variation>
                                 <connections>
-                                    <action selector="addNewEntryBtn:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="Xjj-ye-ME2"/>
+                                    <outlet property="dataSource" destination="SbI-Cl-qZK" id="Cbu-Sq-PWH"/>
+                                    <outlet property="delegate" destination="SbI-Cl-qZK" id="BB8-tk-alg"/>
                                 </connections>
-                            </button>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -187,8 +217,11 @@
                                 <exclude reference="gGQ-jY-FuH"/>
                                 <exclude reference="HVz-jU-ny3"/>
                                 <exclude reference="3p8-fa-0Tn"/>
+                                <exclude reference="jI3-9v-KfJ"/>
+                                <exclude reference="kGn-zF-l2z"/>
+                                <exclude reference="vrK-4x-OLa"/>
                                 <exclude reference="RPQ-SD-yPf"/>
-                                <exclude reference="94P-ez-tMx"/>
+                                <exclude reference="ltY-mz-nuG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -197,8 +230,11 @@
                                 <include reference="gGQ-jY-FuH"/>
                                 <include reference="HVz-jU-ny3"/>
                                 <include reference="3p8-fa-0Tn"/>
+                                <include reference="jI3-9v-KfJ"/>
+                                <include reference="kGn-zF-l2z"/>
+                                <include reference="vrK-4x-OLa"/>
                                 <include reference="RPQ-SD-yPf"/>
-                                <include reference="94P-ez-tMx"/>
+                                <include reference="ltY-mz-nuG"/>
                             </mask>
                         </variation>
                     </view>
@@ -232,4 +268,9 @@
             <point key="canvasLocation" x="343.5" y="-125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="512" height="512"/>
+        <image name="checkmark" width="512" height="512"/>
+        <image name="plus" width="512" height="512"/>
+    </resources>
 </document>
