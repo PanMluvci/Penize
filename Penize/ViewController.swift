@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +26,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var passTxtField: UITextField!
 
+    @IBOutlet weak var tableRows: UITableView!
+
+    @IBOutlet weak var statusLabel: UILabel!
+    
     @IBAction func Save(sender: UIButton) {
+        statusLabel.text = "Saved"
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
@@ -35,10 +40,13 @@ class ViewController: UIViewController {
         newUser.setValue(passTxtField.text, forKey: "pass")
         
         context.save(nil)
-       //println(newUser)
         println("Saved")
+        
     }
     
+    /**
+    *   Present of all rows from db
+    */
     @IBAction func loadBtn(sender: UIButton) {
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
@@ -55,11 +63,15 @@ class ViewController: UIViewController {
             }
             
         }else{
-        println("Stala se asi chyba, nebo je to 0")
+        println("Nic tu není.")
         }
-        
+    
+        statusLabel.text = "Loaded"
     }
     
+    /**
+    *   Delete of all rows
+    */
     @IBAction func purge(sender: UIButton) {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
@@ -80,8 +92,10 @@ class ViewController: UIViewController {
             
             context.save(nil)
         
+            statusLabel.text = "Deleted"
 
     }
+    
     
 }
 
