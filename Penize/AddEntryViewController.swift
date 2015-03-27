@@ -9,7 +9,9 @@
 import UIKit
 import CoreData
 
-class AddEntryViewController: UIViewController {
+class AddEntryViewController: UIViewController, UIPickerViewDelegate {
+    
+    var item:String = ""
     
     @IBOutlet weak var costTxtField: UITextField!
     @IBOutlet weak var noteTxtField: UITextField!
@@ -32,6 +34,8 @@ class AddEntryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     @IBAction func Save(sender: UIButton) {
         //statusLabel.text = "Saved"
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
@@ -39,7 +43,7 @@ class AddEntryViewController: UIViewController {
         
         var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Wallet", inManagedObjectContext: context)
         newUser.setValue(costTxtField.text, forKey: "price")
-        newUser.setValue("", forKey: "activity")
+        newUser.setValue(item, forKey: "activity")
         newUser.setValue(noteTxtField.text, forKey: "note")
         
         
@@ -90,5 +94,10 @@ class AddEntryViewController: UIViewController {
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return colors[row]
     }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        var itemSel = colors[row]
+        item = itemSel
+    }
+
     
 }
