@@ -94,7 +94,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="36" y="41" width="50" height="50"/>
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
                                 </variation>
                                 <connections>
                                     <action selector="backHome:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="ExP-gg-n2s"/>
@@ -128,13 +128,13 @@
                                     <outlet property="delegate" destination="SbI-Cl-qZK" id="BB8-tk-alg"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghJ-bn-p9e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghJ-bn-p9e">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="79" y="369" width="216" height="112"/>
+                                    <rect key="frame" x="84" y="32" width="207" height="62"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -171,6 +171,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="checkmarkSave" destination="vrK-4x-OLa" id="RRK-Us-h7d"/>
                         <outlet property="costTxtField" destination="bge-35-6Hb" id="OUa-mo-v1g"/>
                         <outlet property="infoField" destination="ghJ-bn-p9e" id="hy1-af-Pw6"/>
                         <outlet property="noteTxtField" destination="gGQ-jY-FuH" id="iKA-Vz-y0J"/>
