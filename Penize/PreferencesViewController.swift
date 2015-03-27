@@ -11,11 +11,15 @@ import CoreData
 
 class PreferencesViewController: UIViewController {
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,8 +29,11 @@ class PreferencesViewController: UIViewController {
     
     @IBAction func backBtn(sender: AnyObject) {
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
+        self.navigationController?.pushViewController(addMainVC, animated: true)
         
     }
+    
+    
     
 }

@@ -11,13 +11,15 @@ import CoreData
 
 class AddEntryViewController: UIViewController {
     
-    @IBOutlet weak var userTxtField: UITextField!
-    @IBOutlet weak var passTxtField: UITextField!
+    @IBOutlet weak var costTxtField: UITextField!
+    @IBOutlet weak var noteTxtField: UITextField!
+    @IBOutlet weak var infoField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
+        infoField.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,17 +33,20 @@ class AddEntryViewController: UIViewController {
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Acc", inManagedObjectContext: context)
-        newUser.setValue(userTxtField.text, forKey: "user")
-        newUser.setValue(passTxtField.text, forKey: "pass")
+        newUser.setValue(costTxtField.text, forKey: "user")
+        newUser.setValue(noteTxtField.text, forKey: "pass")
         
         context.save(nil)
         println("Saved")
+        infoField.hidden = false
+        
         
     }
     
-    @IBAction func addNewEntryBtn(sender: AnyObject) {
-     
-        self.navigationController?.popToRootViewControllerAnimated(true)
+    @IBAction func backHome(sender: AnyObject) {
+
+        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
+        self.navigationController?.pushViewController(addMainVC, animated: true)
         
     }
     
