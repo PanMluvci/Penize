@@ -16,8 +16,6 @@
             self.navigationController?.navigationBarHidden = true
             // Do any additional setup after loading the view, typically from a nib.
             self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
-            
-            
         }
         
         override func didReceiveMemoryWarning() {
@@ -33,7 +31,7 @@
             var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
             var context: NSManagedObjectContext = appDelegate.managedObjectContext!
             
-            var request = NSFetchRequest(entityName: "Acc")
+            var request = NSFetchRequest(entityName: "Wallet")
             request.returnsObjectsAsFaults = false
             
             var results:NSArray = context.executeFetchRequest(request, error: nil)!
@@ -59,7 +57,7 @@
             let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
             let context: NSManagedObjectContext = appDelegate.managedObjectContext!
             
-            let request = NSFetchRequest(entityName: "Acc")
+            let request = NSFetchRequest(entityName: "Wallet")
             
             var myList = context.executeFetchRequest(request, error: nil)!
             

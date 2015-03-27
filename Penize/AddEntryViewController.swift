@@ -37,9 +37,14 @@ class AddEntryViewController: UIViewController {
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
-        var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Acc", inManagedObjectContext: context)
-        newUser.setValue(costTxtField.text, forKey: "user")
-        newUser.setValue(noteTxtField.text, forKey: "pass")
+        var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Wallet", inManagedObjectContext: context)
+        newUser.setValue(costTxtField.text, forKey: "price")
+        newUser.setValue("", forKey: "activity")
+        newUser.setValue(noteTxtField.text, forKey: "note")
+        
+        
+        
+
         animateCountdownLabel()
         context.save(nil)
         println("Saved")
@@ -51,12 +56,12 @@ class AddEntryViewController: UIViewController {
     
     func animateCountdownLabel()
     {
-        UIView.animateWithDuration(1.5, animations: { () -> Void in
+        UIView.animateWithDuration(2.0, animations: { () -> Void in
             self.checkmarkSave.hidden = true
             self.infoField.alpha = 1.0
             
             }) { (Bool) -> Void in
-                UIView.animateWithDuration(1.5, animations: { () -> Void in
+                UIView.animateWithDuration(2.0, animations: { () -> Void in
                     
                     self.infoField.alpha = 0.0
                     

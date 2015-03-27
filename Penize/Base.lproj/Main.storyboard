@@ -260,7 +260,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="58" y="179" width="260" height="340"/>
+                                    <rect key="frame" x="58" y="133" width="260" height="386"/>
                                 </variation>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" translatesAutoresizingMaskIntoConstraints="NO" id="n4h-Kr-60b">
@@ -275,19 +275,13 @@
                                     <rect key="frame" x="283" y="557" width="50" height="50"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="RAQ-YX-zwK">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="163" y="60" width="50" height="50"/>
-                                </variation>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refresh" translatesAutoresizingMaskIntoConstraints="NO" id="PdX-8e-JYR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="41" y="557" width="50" height="50"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqQ-VF-p8E">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqQ-VF-p8E">
                                 <rect key="frame" x="381" y="274" width="67" height="52"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -326,12 +320,18 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0y-DE-XNH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="163" y="60" width="50" height="50"/>
+                                    <rect key="frame" x="163" y="42" width="50" height="50"/>
                                 </variation>
                                 <connections>
                                     <action selector="addNewEntryBtn:" destination="oBq-os-ON6" eventType="touchUpInside" id="IVh-KN-RK6"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="RAQ-YX-zwK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="42" width="50" height="50"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -339,12 +339,12 @@
                                 <exclude reference="mFj-t2-HhH"/>
                                 <exclude reference="n4h-Kr-60b"/>
                                 <exclude reference="a1r-g8-XM3"/>
-                                <exclude reference="RAQ-YX-zwK"/>
                                 <exclude reference="PdX-8e-JYR"/>
                                 <exclude reference="VqQ-VF-p8E"/>
                                 <exclude reference="1es-rp-PKA"/>
                                 <exclude reference="NMi-WX-K0C"/>
                                 <exclude reference="U0y-DE-XNH"/>
+                                <exclude reference="RAQ-YX-zwK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -352,12 +352,12 @@
                                 <include reference="mFj-t2-HhH"/>
                                 <include reference="n4h-Kr-60b"/>
                                 <include reference="a1r-g8-XM3"/>
-                                <include reference="RAQ-YX-zwK"/>
                                 <include reference="PdX-8e-JYR"/>
                                 <include reference="VqQ-VF-p8E"/>
                                 <include reference="1es-rp-PKA"/>
                                 <include reference="NMi-WX-K0C"/>
                                 <include reference="U0y-DE-XNH"/>
+                                <include reference="RAQ-YX-zwK"/>
                             </mask>
                         </variation>
                     </view>
