@@ -11,22 +11,21 @@ import CoreData
 
 class AddEntryViewController: UIViewController, UIPickerViewDelegate {
     
-    var item:String = ""
+    var itemActivityValue:String = ""
     
     @IBOutlet weak var costTxtField: UITextField!
     @IBOutlet weak var noteTxtField: UITextField!
     @IBOutlet weak var infoField: UILabel!
     @IBOutlet weak var checkmarkSave: UIImageView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
-        //infoField.hidden = true
         self.infoField.alpha = 0
         self.infoField.font = UIFont(name: "Zapfino", size: 20)
         self.infoField.text = "Activity Saved"
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,17 +42,16 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
         
         var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Wallet", inManagedObjectContext: context)
         newUser.setValue(costTxtField.text, forKey: "price")
-        newUser.setValue(item, forKey: "activity")
+        //solve activity emptyness if you will not move with pickerview
+        if(itemActivityValue.isEmpty){
+        itemActivityValue = activityValues[0]
+        }
+        newUser.setValue(itemActivityValue, forKey: "activity")
         newUser.setValue(noteTxtField.text, forKey: "note")
-        
-        
-        
 
         animateCountdownLabel()
         context.save(nil)
         println("Saved")
-        
-       // infoPanelPrompt()
         
     }
    
@@ -82,21 +80,20 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
         
     }
     
-    var colors = ["Red","Yellow","Green","Blue"]
+    var activityValues = ["0","1","2","3","4","5","6","7"]
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+        return activityValues.count
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return colors[row]
+        return activityValues[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        var itemSel = colors[row]
-        item = itemSel
+        itemActivityValue = activityValues[row]
     }
 
     

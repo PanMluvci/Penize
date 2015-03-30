@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Penize/AddEntryViewController.swift"
-            timestampString = "449172439.184419"
+            timestampString = "449408942.231922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "Save(_:)"
             landmarkType = "5">
          </BreakpointContent>
