@@ -20,7 +20,6 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
         self.infoField.alpha = 0
         self.infoField.font = UIFont(name: "Zapfino", size: 20)
@@ -30,22 +29,22 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
-    
+    /**
+    *   Save spending activity with 3 parameters to the penize.xcdatamodel database.
+    *   "context.save(nil)" is very important for saving operation!
+    */
     @IBAction func Save(sender: UIButton) {
-        //statusLabel.text = "Saved"
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Wallet", inManagedObjectContext: context)
         newUser.setValue(costTxtField.text, forKey: "price")
-        //solve activity emptyness if you will not move with pickerview
-        if(itemActivityValue.isEmpty){
-        itemActivityValue = activityValues[0]
-        }
+        //solving activity emptyness if you will not move with pickerview
+            if(itemActivityValue.isEmpty){
+                itemActivityValue = activityValues[0]
+            }
         newUser.setValue(itemActivityValue, forKey: "activity")
         newUser.setValue(noteTxtField.text, forKey: "note")
 
@@ -55,7 +54,10 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
         
     }
    
-    
+    /**
+    *   Animation of save button when is touched. FadeOut and FadeIn, about 4 sec to take.
+    *
+    */
     func animateCountdownLabel()
     {
         UIView.animateWithDuration(2.0, animations: { () -> Void in
@@ -73,6 +75,10 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
         }
     }
     
+    /**
+    *   Navigate back to the WelcomeViewController after done with activity insert.
+    *
+    */
     @IBAction func backHome(sender: AnyObject) {
 
         let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
@@ -82,6 +88,9 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
     
     var activityValues = ["0","1","2","3","4","5","6","7"]
     
+    /**
+    *   Number of selected components in Pickerview
+    */
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -92,6 +101,10 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return activityValues[row]
     }
+    
+    /**
+    *   Important method for store selected row to Variable for later use in INSERT to Database.
+    */
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         itemActivityValue = activityValues[row]
     }

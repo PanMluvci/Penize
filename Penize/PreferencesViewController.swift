@@ -11,14 +11,11 @@ import CoreData
 
 class PreferencesViewController: UIViewController {
 
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
-        
         
     }
     
@@ -27,6 +24,9 @@ class PreferencesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+    *   Navigation back to WelcomeViewController
+    */
     @IBAction func backBtn(sender: AnyObject) {
         
         let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController

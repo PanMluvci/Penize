@@ -35,7 +35,7 @@
         
         
         /**
-        *   Present of all rows from db
+        *   Print all rows from db
         */
         @IBAction func loadBtn(sender: UIButton) {
             var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
@@ -55,13 +55,10 @@
             }else{
                 println("Nic tu není.")
             }
-            
-            
         }
         
-        
         /**
-        *   Delete of all rows
+        *   Delete all rows
         */
         @IBAction func purge(sender: UIButton) {
             let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -86,11 +83,17 @@
             
         }
         
+        /**
+        *   Navigation to AddEntryViewController
+        */
         @IBAction func addNewEntryBtn(sender: AnyObject) {
             let addEntryVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryVC") as AddEntryViewController
             self.navigationController?.pushViewController(addEntryVC, animated: true)
         }
         
+        /**
+        *   Navigation to PreferencesViewController
+        */
         @IBAction func prefbtn(sender: AnyObject) {
             let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as PreferencesViewController
             self.navigationController?.pushViewController(addPrefVC, animated: true)
