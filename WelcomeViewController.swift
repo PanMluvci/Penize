@@ -9,14 +9,21 @@
     import UIKit
     import CoreData
     
-    class WelcomeViewController: UIViewController {
+    class WelcomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+        
+        @IBOutlet var tableView: UITableView!
+        let textCellIdentifier = "TextCell"
+        
+        let swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
+        
         
         override func viewDidLoad() {
             super.viewDidLoad()
             self.navigationController?.navigationBarHidden = true
             // Do any additional setup after loading the view, typically from a nib.
             self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
-            
+            tableView.delegate = self
+            tableView.dataSource = self
         }
         
         @IBOutlet weak var table: UITableView!
@@ -89,6 +96,29 @@
             self.navigationController?.pushViewController(addPrefVC, animated: true)
         }
         
+        func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+            return 1
+        }
         
+        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return swiftBlogs.count
+        }
+        
+        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
+            
+            let row = indexPath.row
+            cell.textLabel?.text = swiftBlogs[row]
+            
+            return cell
+        }
+        
+        // MARK:  UITableViewDelegate Methods
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            
+            let row = indexPath.row
+            println(swiftBlogs[row])
+        }
         
     }
