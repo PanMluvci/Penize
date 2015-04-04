@@ -119,7 +119,9 @@
             
             return myList.count
         }
-        
+        /*
+            loading stuff from DB to table
+        */
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             
             let CellID: NSString = "Cell"
@@ -146,5 +148,29 @@
             let row = indexPath.row
             //println(swiftBlogs[row])*/
         }
+        func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+            return true
+        }
         
+        /*
+        *   Deleting selected rows with swipe. + error handle
+        */
+        func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+            
+            if editingStyle == UITableViewCellEditingStyle.Delete{
+                if let tv = tableView as UITableView? {
+                    
+                context.deleteObject(myList[indexPath.row] as NSManagedObject)
+                    myList.removeAtIndex(indexPath.row)
+                    tv.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                }
+                
+                var error: NSError? = nil
+                if !context.save(&error){
+                    abort()
+                }
+            }
+        }
     }
