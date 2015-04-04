@@ -12,10 +12,11 @@
     class WelcomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         @IBOutlet var tableView: UITableView!
-        let textCellIdentifier = "TextCell"
-        
+       // let textCellIdentifier = "TextCell"
         let swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
+         @IBOutlet weak var table: UITableView!
         
+        var myList : Array<AnyObject> = []
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -24,9 +25,20 @@
             self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
             tableView.delegate = self
             tableView.dataSource = self
+            
+            
         }
         
-        @IBOutlet weak var table: UITableView!
+        override func viewDidAppear(animated: Bool){
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            var context: NSManagedObjectContext = appDelegate.managedObjectContext!
+            var request = NSFetchRequest(entityName: "Wallet")
+            
+            myList = context.executeFetchRequest(request, error: nil)!
+
+            tableView.reloadData()
+        }
+    
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
@@ -79,7 +91,7 @@
             myList.removeAll(keepCapacity: false)
             
             context.save(nil)
-            println("Vše smazáno")
+            tableView.reloadData()
             
         }
         
@@ -104,24 +116,35 @@
         }
         
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return swiftBlogs.count
+            
+            return myList.count
         }
         
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
             
-            let row = indexPath.row
-            cell.textLabel?.text = swiftBlogs[row]
+            let CellID: NSString = "Cell"
+            var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellID) as UITableViewCell
+            
+            if let ip = indexPath as NSIndexPath? {
+              
+                var data: NSManagedObject = myList[ip.row] as NSManagedObject
+                cell.textLabel?.text = data.valueForKeyPath("price") as? String
+                
+                var price = data.valueForKeyPath("activity") as String
+                var note = data.valueForKeyPath("note") as String
+
+                cell.detailTextLabel?.text = "\(price) - \(note)"
+            }
             
             return cell
         }
         
-        // MARK:  UITableViewDelegate Methods
+        // metoda po stisku začne něco dělat
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            /*tableView.deselectRowAtIndexPath(indexPath, animated: true)
             
             let row = indexPath.row
-            println(swiftBlogs[row])
+            //println(swiftBlogs[row])*/
         }
         
     }
