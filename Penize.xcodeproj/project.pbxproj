@@ -16,6 +16,7 @@
 		CC68E1991ABE0D6D00F5E5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC68E1981ABE0D6D00F5E5F9 /* Images.xcassets */; };
 		CC68E19C1ABE0D6D00F5E5F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC68E19A1ABE0D6D00F5E5F9 /* LaunchScreen.xib */; };
 		CC68E1A81ABE0D6D00F5E5F9 /* PenizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68E1A71ABE0D6D00F5E5F9 /* PenizeTests.swift */; };
+		CC784AD01AD0792400DBE79F /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC784ACF1AD0792400DBE79F /* QuestionsViewController.swift */; };
 		CC7E96EB1AC453E4004440B8 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E96EA1AC453E4004440B8 /* AddEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		CC68E1A11ABE0D6D00F5E5F9 /* PenizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC68E1A61ABE0D6D00F5E5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC68E1A71ABE0D6D00F5E5F9 /* PenizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenizeTests.swift; sourceTree = "<group>"; };
+		CC784ACF1AD0792400DBE79F /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		CC7E96EA1AC453E4004440B8 /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				CC68E18E1ABE0D6D00F5E5F9 /* AppDelegate.swift */,
 				CC7E96EA1AC453E4004440B8 /* AddEntryViewController.swift */,
 				CC35DFE11AC56ADB009AD45F /* WelcomeViewController.swift */,
+				CC784ACF1AD0792400DBE79F /* QuestionsViewController.swift */,
 				CC68E1931ABE0D6D00F5E5F9 /* ViewController.swift */,
 				CC64E9FF1AC496FE0074FE15 /* PreferencesViewController.swift */,
 				CC68E1951ABE0D6D00F5E5F9 /* Main.storyboard */,
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC64EA001AC496FE0074FE15 /* PreferencesViewController.swift in Sources */,
+				CC784AD01AD0792400DBE79F /* QuestionsViewController.swift in Sources */,
 				CC68E1941ABE0D6D00F5E5F9 /* ViewController.swift in Sources */,
 				CC7E96EB1AC453E4004440B8 /* AddEntryViewController.swift in Sources */,
 				CC35DFE21AC56ADB009AD45F /* WelcomeViewController.swift in Sources */,

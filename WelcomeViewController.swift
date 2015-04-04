@@ -39,59 +39,48 @@
             tableView.reloadData()
         }
     
-        
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
         
-        
         /**
-        *   Print all rows from db
-        */
-        @IBAction func loadBtn(sender: UIButton) {
-            var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-            var context: NSManagedObjectContext = appDelegate.managedObjectContext!
-            
-            var request = NSFetchRequest(entityName: "Wallet")
-            request.returnsObjectsAsFaults = false
-            
-            var results:NSArray = context.executeFetchRequest(request, error: nil)!
-            
-            if (results.count > 0){
-                
-                for res in results{
-                    println(res)
-                }
-                
-            }else{
-                println("Nic tu není.")
-            }
-        }
-        
-        /**
-        *   Delete all rows
+        *   Showing message. If YES then Delete all rows
         */
         @IBAction func purge(sender: UIButton) {
             let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
             let context: NSManagedObjectContext = appDelegate.managedObjectContext!
-            
             let request = NSFetchRequest(entityName: "Wallet")
+            myList = context.executeFetchRequest(request, error: nil)!
             
-            var myList = context.executeFetchRequest(request, error: nil)!
-            
-            var bas: NSManagedObject!
-            
-            
-            for bas: AnyObject in myList
-            {
-                context.deleteObject(bas as NSManagedObject)
-            }
-            
-            myList.removeAll(keepCapacity: false)
-            
-            context.save(nil)
-            tableView.reloadData()
+            var alert = UIAlertController(title: "Do you really want to purge all your spending?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "Yes", style: .Destructive, handler: { action in
+                switch action.style{
+                case .Default:
+                    break
+                    
+                case .Cancel:
+                    break
+                    
+                case .Destructive:
+                    
+                    var bas: NSManagedObject!
+                    
+                    for bas: AnyObject in self.myList
+                    {
+                        context.deleteObject(bas as NSManagedObject)
+                    }
+                    
+                    self.myList.removeAll(keepCapacity: false)
+                    
+                    context.save(nil)
+                    
+                }
+            }))
+            self.tableView.reloadData()
+
             
         }
         
@@ -109,6 +98,14 @@
         @IBAction func prefbtn(sender: AnyObject) {
             let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as PreferencesViewController
             self.navigationController?.pushViewController(addPrefVC, animated: true)
+        }
+        
+        /**
+        *   Navigation to PreferencesViewController
+        */
+        @IBAction func questionBtn(sender: AnyObject) {
+            let questionVC = self.storyboard?.instantiateViewControllerWithIdentifier("QuestionVC") as QuestionsViewController
+            self.navigationController?.pushViewController(questionVC, animated: true)
         }
         
         func numberOfSectionsInTableView(tableView: UITableView) -> Int {

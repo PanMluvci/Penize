@@ -244,6 +244,48 @@
             </objects>
             <point key="canvasLocation" x="2019.75" y="674.5"/>
         </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="Vca-Ja-zYV">
+            <objects>
+                <viewController storyboardIdentifier="QuestionVC" id="26I-P3-rv0" customClass="QuestionsViewController" customModule="Penize" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FWt-KT-ULF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ubj-2j-yFr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GyX-w4-NCS">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf6-Bj-Kbz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="158" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backBtn:" destination="26I-P3-rv0" eventType="touchUpInside" id="FFQ-Yl-bIA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qf6-Bj-Kbz"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qf6-Bj-Kbz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8F-Im-Oc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381.75" y="674.5"/>
+        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="h74-9Q-CBQ">
             <objects>
@@ -268,7 +310,7 @@
                                     <rect key="frame" x="283" y="557" width="50" height="50"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refresh" translatesAutoresizingMaskIntoConstraints="NO" id="PdX-8e-JYR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionMark" translatesAutoresizingMaskIntoConstraints="NO" id="PdX-8e-JYR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="41" y="557" width="50" height="50"/>
@@ -283,7 +325,7 @@
                                     <rect key="frame" x="41" y="557" width="50" height="50"/>
                                 </variation>
                                 <connections>
-                                    <action selector="loadBtn:" destination="oBq-os-ON6" eventType="touchUpInside" id="N10-5o-R1r"/>
+                                    <action selector="questionBtn:" destination="oBq-os-ON6" eventType="touchUpInside" id="c3F-rq-398"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1es-rp-PKA">
@@ -337,7 +379,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xN8-N8-YtV">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact">
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -406,7 +448,7 @@
         <image name="checkmark" width="256" height="256"/>
         <image name="config" width="256" height="256"/>
         <image name="plus" width="256" height="256"/>
-        <image name="refresh" width="256" height="256"/>
+        <image name="questionMark" width="256" height="256"/>
         <image name="trash" width="256" height="256"/>
     </resources>
 </document>
