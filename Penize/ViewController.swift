@@ -41,13 +41,13 @@ class ViewController: UIViewController {
         mySecondLabel.center = CGPoint(x: 200, y: 90)
         view.addSubview(mySecondLabel)
         
-        UIView.animateWithDuration(2.0, delay: 0.5, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: nil, animations: {
+        UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: nil, animations: {
             self.mySecondLabel.center = CGPoint(x: 200, y: 90 + 200)
             
             }, completion: nil)
         
         
-        let timer = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
+        let timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
     }
     
     func timeToMoveOn() {

@@ -77,11 +77,11 @@
                     
                     context.save(nil)
                     
+                    //reload view
+                    let reloadTable = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
+                    self.navigationController?.pushViewController(reloadTable, animated: true)
                 }
             }))
-            self.tableView.reloadData()
-
-            
         }
         
         /**

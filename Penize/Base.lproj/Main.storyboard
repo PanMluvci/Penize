@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260.75" y="-125.5"/>
+            <point key="canvasLocation" x="606.75" y="-125.5"/>
         </scene>
         <!--Add Entry View Controller-->
         <scene sceneID="Arx-Mn-d25">
@@ -88,18 +88,6 @@
                                     <rect key="frame" x="36" y="38" width="50" height="50"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGn-zF-l2z" userLabel="backBtn">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
-                                </variation>
-                                <connections>
-                                    <action selector="backHome:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="ExP-gg-n2s"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="vrK-4x-OLa" userLabel="checkmarkSave">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -137,6 +125,18 @@
                                     <rect key="frame" x="84" y="32" width="207" height="62"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGn-zF-l2z" userLabel="backBtn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backHome:" destination="SbI-Cl-qZK" eventType="touchUpInside" id="ExP-gg-n2s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -146,11 +146,11 @@
                                 <exclude reference="HVz-jU-ny3"/>
                                 <exclude reference="3p8-fa-0Tn"/>
                                 <exclude reference="jI3-9v-KfJ"/>
-                                <exclude reference="kGn-zF-l2z"/>
                                 <exclude reference="vrK-4x-OLa"/>
                                 <exclude reference="RPQ-SD-yPf"/>
                                 <exclude reference="ltY-mz-nuG"/>
                                 <exclude reference="ghJ-bn-p9e"/>
+                                <exclude reference="kGn-zF-l2z"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -160,11 +160,11 @@
                                 <include reference="HVz-jU-ny3"/>
                                 <include reference="3p8-fa-0Tn"/>
                                 <include reference="jI3-9v-KfJ"/>
-                                <include reference="kGn-zF-l2z"/>
                                 <include reference="vrK-4x-OLa"/>
                                 <include reference="RPQ-SD-yPf"/>
                                 <include reference="ltY-mz-nuG"/>
                                 <include reference="ghJ-bn-p9e"/>
+                                <include reference="kGn-zF-l2z"/>
                             </mask>
                         </variation>
                     </view>
@@ -198,7 +198,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6x-z8-uV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343.5" y="-125"/>
+            <point key="canvasLocation" x="-404.25" y="-125.5"/>
         </scene>
         <!--Preferences View Controller-->
         <scene sceneID="Dku-n4-WPG">
@@ -212,28 +212,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8Z-pm-LAO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="p7v-fi-aKC" userLabel="backImg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r6-ft-vvI" userLabel="backBtn">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="164" y="125" width="46" height="30"/>
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
                                 </variation>
                                 <connections>
-                                    <action selector="backBtn:" destination="jSw-Uh-4mi" eventType="touchUpInside" id="GJ6-lS-ttd"/>
+                                    <action selector="backBtn:" destination="jSw-Uh-4mi" eventType="touchUpInside" id="0kL-fF-sui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH5-Tt-F8G">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="ActionVC">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="102" width="91" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="moveToActionVC:" destination="jSw-Uh-4mi" eventType="touchUpInside" id="V3h-Ac-Me0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="L8Z-pm-LAO"/>
+                                <exclude reference="p7v-fi-aKC"/>
+                                <exclude reference="7r6-ft-vvI"/>
+                                <exclude reference="fH5-Tt-F8G"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="L8Z-pm-LAO"/>
+                                <include reference="p7v-fi-aKC"/>
+                                <include reference="7r6-ft-vvI"/>
+                                <include reference="fH5-Tt-F8G"/>
                             </mask>
                         </variation>
                     </view>
@@ -244,6 +266,113 @@
             </objects>
             <point key="canvasLocation" x="2019.75" y="674.5"/>
         </scene>
+        <!--Action Setting View Controller-->
+        <scene sceneID="eWU-Ya-xjq">
+            <objects>
+                <viewController storyboardIdentifier="ActionConfigVC" id="gyk-MQ-8gH" customClass="ActionSettingViewController" customModule="Penize" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AlP-4Y-1Fk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Etw-Y8-fnV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m4F-bJ-Mr5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Ema-tC-Vic" userLabel="backImg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol8-ik-k0k" userLabel="backBtn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backBtn:" destination="gyk-MQ-8gH" eventType="touchUpInside" id="sLL-Hz-GtM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XZ-Bh-tti">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="106" y="117" width="162" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjo-0Z-neW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="48" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Save:" destination="gyk-MQ-8gH" eventType="touchUpInside" id="aJ1-pY-O1K"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ccG-U3-A2x">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="nHg-bd-10Y" style="IBUITableViewCellStyleDefault" id="8kN-ey-mvl">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8kN-ey-mvl" id="8gj-jE-9vc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nHg-bd-10Y">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="169" width="299" height="268"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ema-tC-Vic"/>
+                                <exclude reference="Ol8-ik-k0k"/>
+                                <exclude reference="9XZ-Bh-tti"/>
+                                <exclude reference="jjo-0Z-neW"/>
+                                <exclude reference="ccG-U3-A2x"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ema-tC-Vic"/>
+                                <include reference="Ol8-ik-k0k"/>
+                                <include reference="9XZ-Bh-tti"/>
+                                <include reference="jjo-0Z-neW"/>
+                                <include reference="ccG-U3-A2x"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameEnterTxtField" destination="9XZ-Bh-tti" id="c6f-Tn-07J"/>
+                        <outlet property="tableView" destination="ccG-U3-A2x" id="YOt-iC-Loy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNC-Z1-uXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2690.25" y="674.5"/>
+        </scene>
         <!--Questions View Controller-->
         <scene sceneID="Vca-Ja-zYV">
             <objects>
@@ -253,6 +382,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ubj-2j-yFr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GyX-w4-NCS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf6-Bj-Kbz">
@@ -284,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8F-Im-Oc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381.75" y="674.5"/>
+            <point key="canvasLocation" x="456.75" y="674.5"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="h74-9Q-CBQ">
@@ -440,7 +570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HxR-Qq-OPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260.75" y="674.5"/>
+            <point key="canvasLocation" x="1281.75" y="382.5"/>
         </scene>
     </scenes>
     <resources>

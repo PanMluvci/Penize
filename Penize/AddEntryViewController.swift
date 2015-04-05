@@ -50,7 +50,6 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
 
         animateCountdownLabel()
         context.save(nil)
-        println("Saved")
         
     }
    

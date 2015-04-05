@@ -24,6 +24,13 @@ class PreferencesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func moveToActionVC(sender: AnyObject) {
+        let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("ActionConfigVC") as ActionSettingViewController
+        self.navigationController?.pushViewController(addPrefVC, animated: true)
+    }
+    
+    
     /*
     *   Navigation back to WelcomeViewController
     */
