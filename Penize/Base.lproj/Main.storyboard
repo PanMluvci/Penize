@@ -232,11 +232,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH5-Tt-F8G">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="ActionVC">
+                                <state key="normal" title="Activity spending">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="142" y="102" width="91" height="30"/>
+                                    <rect key="frame" x="118" y="113" width="139" height="36"/>
                                 </variation>
                                 <connections>
                                     <action selector="moveToActionVC:" destination="jSw-Uh-4mi" eventType="touchUpInside" id="V3h-Ac-Me0"/>
@@ -426,8 +426,23 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="164" y="158" width="46" height="30"/>
                                 </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="qte-NH-8uJ" userLabel="backImg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nef-Ro-7oJ" userLabel="backBtn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="38" width="50" height="50"/>
+                                </variation>
                                 <connections>
-                                    <action selector="backBtn:" destination="26I-P3-rv0" eventType="touchUpInside" id="FFQ-Yl-bIA"/>
+                                    <action selector="backBtn:" destination="26I-P3-rv0" eventType="touchUpInside" id="dqh-zA-ghw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -435,11 +450,15 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qf6-Bj-Kbz"/>
+                                <exclude reference="qte-NH-8uJ"/>
+                                <exclude reference="nef-Ro-7oJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="qf6-Bj-Kbz"/>
+                                <include reference="qte-NH-8uJ"/>
+                                <include reference="nef-Ro-7oJ"/>
                             </mask>
                         </variation>
                     </view>
