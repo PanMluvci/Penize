@@ -301,7 +301,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="106" y="117" width="162" height="30"/>
+                                    <rect key="frame" x="160" y="352" width="135" height="30"/>
                                 </variation>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ccG-U3-A2x">
@@ -327,13 +327,13 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="169" width="299" height="268"/>
+                                    <rect key="frame" x="38" y="108" width="299" height="218"/>
                                 </variation>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-KK-eaA" userLabel="checkmarkSave">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="159" y="35" width="56" height="56"/>
+                                    <rect key="frame" x="303" y="349" width="34" height="36"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5o-6o-C5S">
@@ -342,19 +342,28 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="159" y="35" width="56" height="56"/>
+                                    <rect key="frame" x="303" y="352" width="31" height="33"/>
                                 </variation>
                                 <connections>
                                     <action selector="Save:" destination="gyk-MQ-8gH" eventType="touchUpInside" id="0xe-xY-BNn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjf-Tp-yei">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odz-24-fPc">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="84" y="32" width="207" height="62"/>
+                                    <rect key="frame" x="37" y="345" width="138" height="43"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-Gl-dmx">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="94" y="43" width="215" height="48"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -367,7 +376,8 @@
                                 <exclude reference="ccG-U3-A2x"/>
                                 <exclude reference="gx9-KK-eaA"/>
                                 <exclude reference="t5o-6o-C5S"/>
-                                <exclude reference="xjf-Tp-yei"/>
+                                <exclude reference="odz-24-fPc"/>
+                                <exclude reference="hcr-Gl-dmx"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -378,15 +388,17 @@
                                 <include reference="ccG-U3-A2x"/>
                                 <include reference="gx9-KK-eaA"/>
                                 <include reference="t5o-6o-C5S"/>
-                                <include reference="xjf-Tp-yei"/>
+                                <include reference="odz-24-fPc"/>
+                                <include reference="hcr-Gl-dmx"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="checkMarkSave" destination="gx9-KK-eaA" id="nV8-Q0-xpv"/>
-                        <outlet property="infoField" destination="xjf-Tp-yei" id="8ri-X9-ev2"/>
+                        <outlet property="labelText" destination="hcr-Gl-dmx" id="Q5E-aJ-i6C"/>
                         <outlet property="nameEnterTxtField" destination="9XZ-Bh-tti" id="c6f-Tn-07J"/>
+                        <outlet property="newActivityLabel" destination="odz-24-fPc" id="DNb-zJ-3tE"/>
                         <outlet property="tableView" destination="ccG-U3-A2x" id="YOt-iC-Loy"/>
                     </connections>
                 </viewController>

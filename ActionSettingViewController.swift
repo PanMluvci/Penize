@@ -15,9 +15,9 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var nameEnterTxtField: UITextField!
-    @IBOutlet var infoField: UILabel!
-    
     @IBOutlet var checkMarkSave: UIImageView!
+    @IBOutlet var labelText: UILabel!
+    @IBOutlet var newActivityLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +26,17 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
         self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
         tableView.delegate = self
         tableView.dataSource = self
-        self.infoField.alpha = 0
-        self.infoField.font = UIFont(name: "Zapfino", size: 20)
-        self.infoField.text = "Activity Saved"
+        //self.labelText.alpha = 0
+        self.labelText.font = UIFont(name: "Zapfino", size: 16)
+        self.labelText.text = "Activity spending List"
+        self.newActivityLabel.font = UIFont(name: "Zapfino", size: 14)
+        self.newActivityLabel.text = "New Activity:"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     /* Move 1 VC back
     */
@@ -45,40 +46,21 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
         self.navigationController?.pushViewController(addMainVC, animated: true)
         
     }
-    
-    /**
-    *   Animation of save button when is touched. FadeOut and FadeIn, about 4 sec to take.
-    *
-    */
-    func animateCountdownLabel()
-    {
-        UIView.animateWithDuration(2.0, animations: { () -> Void in
-            self.checkMarkSave.hidden = true
-            self.infoField.alpha = 1.0
-            
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(2.0, animations: { () -> Void in
-                    
-                    self.infoField.alpha = 0.0
-                    
-                    }, completion: { (Bool) -> Void in
-                        self.checkMarkSave.hidden = false
-                })
-        }
-    }
 
     @IBAction func Save(sender: UIButton) {
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
-        var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Activity", inManagedObjectContext: context)
-        newUser.setValue(nameEnterTxtField.text, forKey: "name")
-        //solving activity emptyness if you will not move with pickerview
+        //solve empty table rows when added empty string
+        if(nameEnterTxtField.text.isEmpty == false){
+            var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Activity", inManagedObjectContext: context)
+            newUser.setValue(nameEnterTxtField.text, forKey: "name")
+            context.save(nil)
+            //reload view
+            let reloadTable = self.storyboard?.instantiateViewControllerWithIdentifier("ActionConfigVC") as ActionSettingViewController
+            self.navigationController?.pushViewController(reloadTable, animated: true)
+        }
         
-        context.save(nil)
-        //reload view
-        let reloadTable = self.storyboard?.instantiateViewControllerWithIdentifier("ActionConfigVC") as ActionSettingViewController
-        self.navigationController?.pushViewController(reloadTable, animated: true)
         
     }
     
