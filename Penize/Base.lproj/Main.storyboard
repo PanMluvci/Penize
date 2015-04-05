@@ -384,6 +384,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="checkMarkSave" destination="gx9-KK-eaA" id="nV8-Q0-xpv"/>
+                        <outlet property="infoField" destination="xjf-Tp-yei" id="8ri-X9-ev2"/>
                         <outlet property="nameEnterTxtField" destination="9XZ-Bh-tti" id="c6f-Tn-07J"/>
                         <outlet property="tableView" destination="ccG-U3-A2x" id="YOt-iC-Loy"/>
                     </connections>

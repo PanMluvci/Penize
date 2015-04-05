@@ -15,7 +15,10 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var nameEnterTxtField: UITextField!
-
+    @IBOutlet var infoField: UILabel!
+    
+    @IBOutlet var checkMarkSave: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +26,9 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
         self.view.backgroundColor = UIColor(red: 117/255, green: 209/255, blue: 255/255, alpha: 1.0)
         tableView.delegate = self
         tableView.dataSource = self
+        self.infoField.alpha = 0
+        self.infoField.font = UIFont(name: "Zapfino", size: 20)
+        self.infoField.text = "Activity Saved"
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +44,27 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
         let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as PreferencesViewController
         self.navigationController?.pushViewController(addMainVC, animated: true)
         
+    }
+    
+    /**
+    *   Animation of save button when is touched. FadeOut and FadeIn, about 4 sec to take.
+    *
+    */
+    func animateCountdownLabel()
+    {
+        UIView.animateWithDuration(2.0, animations: { () -> Void in
+            self.checkMarkSave.hidden = true
+            self.infoField.alpha = 1.0
+            
+            }) { (Bool) -> Void in
+                UIView.animateWithDuration(2.0, animations: { () -> Void in
+                    
+                    self.infoField.alpha = 0.0
+                    
+                    }, completion: { (Bool) -> Void in
+                        self.checkMarkSave.hidden = false
+                })
+        }
     }
 
     @IBAction func Save(sender: UIButton) {
