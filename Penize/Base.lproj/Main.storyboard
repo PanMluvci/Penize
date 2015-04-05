@@ -304,18 +304,6 @@
                                     <rect key="frame" x="106" y="117" width="162" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjo-0Z-neW">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="164" y="48" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="Save:" destination="gyk-MQ-8gH" eventType="touchUpInside" id="aJ1-pY-O1K"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ccG-U3-A2x">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -342,6 +330,33 @@
                                     <rect key="frame" x="38" y="169" width="299" height="268"/>
                                 </variation>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-KK-eaA" userLabel="checkmarkSave">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="159" y="35" width="56" height="56"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5o-6o-C5S">
+                                <rect key="frame" x="152" y="274" width="67" height="52"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="159" y="35" width="56" height="56"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Save:" destination="gyk-MQ-8gH" eventType="touchUpInside" id="0xe-xY-BNn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjf-Tp-yei">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="84" y="32" width="207" height="62"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -349,8 +364,10 @@
                                 <exclude reference="Ema-tC-Vic"/>
                                 <exclude reference="Ol8-ik-k0k"/>
                                 <exclude reference="9XZ-Bh-tti"/>
-                                <exclude reference="jjo-0Z-neW"/>
                                 <exclude reference="ccG-U3-A2x"/>
+                                <exclude reference="gx9-KK-eaA"/>
+                                <exclude reference="t5o-6o-C5S"/>
+                                <exclude reference="xjf-Tp-yei"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -358,8 +375,10 @@
                                 <include reference="Ema-tC-Vic"/>
                                 <include reference="Ol8-ik-k0k"/>
                                 <include reference="9XZ-Bh-tti"/>
-                                <include reference="jjo-0Z-neW"/>
                                 <include reference="ccG-U3-A2x"/>
+                                <include reference="gx9-KK-eaA"/>
+                                <include reference="t5o-6o-C5S"/>
+                                <include reference="xjf-Tp-yei"/>
                             </mask>
                         </variation>
                     </view>
@@ -371,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNC-Z1-uXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690.25" y="674.5"/>
+            <point key="canvasLocation" x="2673.75" y="669.5"/>
         </scene>
         <!--Questions View Controller-->
         <scene sceneID="Vca-Ja-zYV">

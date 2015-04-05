@@ -13,7 +13,6 @@
         
         @IBOutlet var tableView: UITableView!
        // let textCellIdentifier = "TextCell"
-        let swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
          @IBOutlet weak var table: UITableView!
         
         var myList : Array<AnyObject> = []
