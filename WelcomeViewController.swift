@@ -29,7 +29,7 @@
         }
         
         override func viewDidAppear(animated: Bool){
-            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             var context: NSManagedObjectContext = appDelegate.managedObjectContext!
             var request = NSFetchRequest(entityName: "Wallet")
             
@@ -47,7 +47,7 @@
         *   Showing message. If YES then Delete all rows
         */
         @IBAction func purge(sender: UIButton) {
-            let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let context: NSManagedObjectContext = appDelegate.managedObjectContext!
             let request = NSFetchRequest(entityName: "Wallet")
             myList = context.executeFetchRequest(request, error: nil)!
@@ -69,7 +69,7 @@
                     
                     for bas: AnyObject in self.myList
                     {
-                        context.deleteObject(bas as NSManagedObject)
+                        context.deleteObject(bas as! NSManagedObject)
                     }
                     
                     self.myList.removeAll(keepCapacity: false)
@@ -77,7 +77,7 @@
                     context.save(nil)
                     
                     //reload view
-                    let reloadTable = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
+                    let reloadTable = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as! WelcomeViewController
                     self.navigationController?.pushViewController(reloadTable, animated: true)
                 }
             }))
@@ -87,7 +87,7 @@
         *   Navigation to AddEntryViewController
         */
         @IBAction func addNewEntryBtn(sender: AnyObject) {
-            let addEntryVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryVC") as AddEntryViewController
+            let addEntryVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryVC") as! AddEntryViewController
             self.navigationController?.pushViewController(addEntryVC, animated: true)
         }
         
@@ -95,7 +95,7 @@
         *   Navigation to PreferencesViewController
         */
         @IBAction func prefbtn(sender: AnyObject) {
-            let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as PreferencesViewController
+            let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as! PreferencesViewController
             self.navigationController?.pushViewController(addPrefVC, animated: true)
         }
         
@@ -103,7 +103,7 @@
         *   Navigation to PreferencesViewController
         */
         @IBAction func questionBtn(sender: AnyObject) {
-            let questionVC = self.storyboard?.instantiateViewControllerWithIdentifier("QuestionVC") as QuestionsViewController
+            let questionVC = self.storyboard?.instantiateViewControllerWithIdentifier("QuestionVC") as! QuestionsViewController
             self.navigationController?.pushViewController(questionVC, animated: true)
         }
         
@@ -121,15 +121,15 @@
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             
             let CellID: NSString = "Cell"
-            var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellID) as UITableViewCell
+            var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellID as String) as! UITableViewCell
             
             if let ip = indexPath as NSIndexPath? {
               
-                var data: NSManagedObject = myList[ip.row] as NSManagedObject
+                var data: NSManagedObject = myList[ip.row] as! NSManagedObject
                 cell.textLabel?.text = data.valueForKeyPath("price") as? String
                 
-                var price = data.valueForKeyPath("activity") as String
-                var note = data.valueForKeyPath("note") as String
+                var price = data.valueForKeyPath("activity") as! String
+                var note = data.valueForKeyPath("note") as! String
 
                 cell.detailTextLabel?.text = "\(price) - \(note)"
             }
@@ -152,13 +152,13 @@
         *   Deleting selected rows with swipe. + error handle
         */
         func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-            let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let context: NSManagedObjectContext = appDelegate.managedObjectContext!
             
             if editingStyle == UITableViewCellEditingStyle.Delete{
                 if let tv = tableView as UITableView? {
                     
-                context.deleteObject(myList[indexPath.row] as NSManagedObject)
+                context.deleteObject(myList[indexPath.row] as! NSManagedObject)
                     myList.removeAtIndex(indexPath.row)
                     tv.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                 }

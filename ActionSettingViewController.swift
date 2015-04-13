@@ -42,13 +42,13 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
     */
     @IBAction func backBtn(sender: AnyObject) {
         
-        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as PreferencesViewController
+        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddPrefVC") as! PreferencesViewController
         self.navigationController?.pushViewController(addMainVC, animated: true)
         
     }
 
     @IBAction func Save(sender: UIButton) {
-        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         //solve empty table rows when added empty string
@@ -57,7 +57,7 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
             newUser.setValue(nameEnterTxtField.text, forKey: "name")
             context.save(nil)
             //reload view
-            let reloadTable = self.storyboard?.instantiateViewControllerWithIdentifier("ActionConfigVC") as ActionSettingViewController
+            let reloadTable = self.storyboard?.instantiateViewControllerWithIdentifier("ActionConfigVC") as! ActionSettingViewController
             self.navigationController?.pushViewController(reloadTable, animated: true)
         }
         
@@ -65,7 +65,7 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     override func viewDidAppear(animated: Bool){
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         var request = NSFetchRequest(entityName: "Activity")
         
@@ -84,11 +84,11 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let CellID: NSString = "Cell"
-        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellID) as UITableViewCell
+        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellID as String) as! UITableViewCell
         
         if let ip = indexPath as NSIndexPath? {
             
-            var data: NSManagedObject = myList[ip.row] as NSManagedObject
+            var data: NSManagedObject = myList[ip.row] as! NSManagedObject
             cell.textLabel?.text = data.valueForKeyPath("name") as? String
             
             //cell.detailTextLabel?.text = "\(name)"
@@ -106,13 +106,13 @@ class ActionSettingViewController: UIViewController, UITableViewDataSource, UITa
         return true
     }
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         if editingStyle == UITableViewCellEditingStyle.Delete{
             if let tv = tableView as UITableView? {
                 
-                context.deleteObject(myList[indexPath.row] as NSManagedObject)
+                context.deleteObject(myList[indexPath.row] as! NSManagedObject)
                 myList.removeAtIndex(indexPath.row)
                 tv.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
             }

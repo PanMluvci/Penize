@@ -23,7 +23,7 @@ class QuestionsViewController: UIViewController {
     
     @IBAction func backBtn(sender: AnyObject) {
         
-        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
+        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as! WelcomeViewController
         self.navigationController?.pushViewController(addMainVC, animated: true)
         
     }

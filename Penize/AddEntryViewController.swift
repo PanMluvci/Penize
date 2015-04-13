@@ -36,7 +36,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
     *   "context.save(nil)" is very important for saving operation!
     */
     @IBAction func Save(sender: UIButton) {
-        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         var newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Wallet", inManagedObjectContext: context)
@@ -80,7 +80,7 @@ class AddEntryViewController: UIViewController, UIPickerViewDelegate {
     */
     @IBAction func backHome(sender: AnyObject) {
 
-        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
+        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as! WelcomeViewController
         self.navigationController?.pushViewController(addMainVC, animated: true)
         
     }

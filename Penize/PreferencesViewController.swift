@@ -26,7 +26,7 @@ class PreferencesViewController: UIViewController {
     
     
     @IBAction func moveToActionVC(sender: AnyObject) {
-        let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("ActionConfigVC") as ActionSettingViewController
+        let addPrefVC = self.storyboard?.instantiateViewControllerWithIdentifier("ActionConfigVC") as! ActionSettingViewController
         self.navigationController?.pushViewController(addPrefVC, animated: true)
     }
     
@@ -36,7 +36,7 @@ class PreferencesViewController: UIViewController {
     */
     @IBAction func backBtn(sender: AnyObject) {
         
-        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as WelcomeViewController
+        let addMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as! WelcomeViewController
         self.navigationController?.pushViewController(addMainVC, animated: true)
         
     }
